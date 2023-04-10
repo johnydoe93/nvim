@@ -1,1 +1,1 @@
-vim.keymap.set('n', '<leader>s', ':Switch<ENTER>', {silent=true})
+--vim.keymap.set('n', '<leader>s', ':Switch', {silent=true})
