@@ -1,7 +1,7 @@
 vim.keymap.set("n", "H", ":tabp<CR>");
 vim.keymap.set("n", "L", ":tabn<CR>");
 vim.keymap.set("n", "<leader>ta", ":$tabnew<CR>");
-vim.keymap.set("n", "<leader>cc", ":tabclose<CR>");
+vim.keymap.set("n", "x", ":tabclose<CR>");
 vim.keymap.set("n", "<leader>Q", ":tabonly<CR>");
 vim.keymap.set("n", "<leader>tb", ":CopyFileName<ENTER> | :tab sb %<CR>");
 vim.keymap.set("n", "<leader>z", "<C-6>");

@@ -1,4 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+ --This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -78,7 +78,25 @@ return require('packer').startup(function(use)
   }
   use { 'preservim/nerdcommenter' }
   use { 'bogado/file-line' }
+  use({
+      "jackMort/ChatGPT.nvim",
+      config = function()
+          require("chatgpt").setup()
+      end,
+      requires = {
+          "MunifTanjim/nui.nvim",
+          "nvim-lua/plenary.nvim",
+          "nvim-telescope/telescope.nvim"
+      }
+  })
+  use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
       require("toggleterm").setup()
   end}
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  use { 'tpope/vim-endwise' }
+  use { 'ctrlpvim/ctrlp.vim' }
+  use { 'kchmck/vim-coffee-script' }
+  use { 'tpope/vim-rails' }
+  use { 'honza/vim-snippets' }
 end)

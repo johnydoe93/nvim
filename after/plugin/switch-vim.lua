@@ -1,1 +1,1 @@
---vim.keymap.set('n', '<leader>s', ':Switch', {silent=true})
+vim.keymap.set('n', '<leader>s', ':Switch<CR>', {silent=true})
