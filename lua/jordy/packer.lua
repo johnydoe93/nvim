@@ -8,16 +8,18 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'} }
   }
-
+  --use { 'nvim-telescope/telescope-fzy-native.nvim' }
   -- use({ 'rose-pine/neovim' })
   -- use('Mofiqul/vscode.nvim')
   -- use('martinsione/darkplus.nvim')
   -- use("lunarvim/darkplus.nvim")
-
+  use {
+      "nvim-telescope/telescope-file-browser.nvim",
+      requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  }
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
@@ -78,17 +80,6 @@ return require('packer').startup(function(use)
   }
   use { 'preservim/nerdcommenter' }
   use { 'bogado/file-line' }
-  use({
-      "jackMort/ChatGPT.nvim",
-      config = function()
-          require("chatgpt").setup()
-      end,
-      requires = {
-          "MunifTanjim/nui.nvim",
-          "nvim-lua/plenary.nvim",
-          "nvim-telescope/telescope.nvim"
-      }
-  })
   use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
       require("toggleterm").setup()
@@ -99,4 +90,9 @@ return require('packer').startup(function(use)
   use { 'kchmck/vim-coffee-script' }
   use { 'tpope/vim-rails' }
   use { 'honza/vim-snippets' }
+  use {
+      "williamboman/mason.nvim",
+      run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+  }
+  use { 'vim-ruby/vim-ruby' }
 end)

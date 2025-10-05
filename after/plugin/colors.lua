@@ -1,7 +1,10 @@
 vim.cmd("colorscheme nordfox")
 require('nightfox').setup({
     options = {
-        transparent = true,
+        transparent = false,
+        styles = {
+            comments = "NONE",
+        }
     }
 })
 

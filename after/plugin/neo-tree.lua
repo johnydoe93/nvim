@@ -1,5 +1,5 @@
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
-vim.keymap.set("n", "<leader>E", vim.cmd.NvimTreeFindFile)
+vim.keymap.set("n", "<leader>E", vim.cmd.NvimTreeCollapse)
 local nvim_tree = require('nvim-tree')
 local nvim_tree_config = require('nvim-tree.config')
 local tree_cb = nvim_tree_config.nvim_tree_callback
