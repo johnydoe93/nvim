@@ -39,3 +39,71 @@ vim.keymap.set("n", "<leader>s", "<Esc><Cmd>lua require('jordy.cht').so_input()<
 --vim.keymap.set("n", "<leader>gg", ":ChatGPT<CR>")
 vim.keymap.set("n", "<leader>i", ":lua vim.diagnostic.open_float()<CR>")
 
+local cmp = require("cmp")
+local luasnip = require("luasnip")
+
+local function jumpable(direction)
+    if luasnip.jumpable(direction) then
+        luasnip.jump(direction)
+        return true
+    end
+    return false
+end
+
+cmp.setup({
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
+    },
+    mapping = cmp.mapping.preset.insert({
+        -- ✅ Ctrl+Space to accept completion or expand snippet
+        ["<C-;>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.confirm({ select = true })
+            elseif luasnip.expandable() then
+                luasnip.expand()
+            elseif luasnip.jumpable(1) then
+                luasnip.jump(1)
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
+
+        -- ✅ Ctrl+J → next completion OR snippet jump forward
+        ["<C-j>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+            elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
+
+        -- ✅ Ctrl+K → previous completion OR snippet jump backward
+        ["<C-k>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+            elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
+
+        -- Optional scroll doc mappings
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+    }),
+
+
+
+    sources = {
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "buffer" },
+        { name = "path" },
+    },
+})
+
