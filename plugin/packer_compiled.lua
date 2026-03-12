@@ -75,10 +75,16 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
-    config = { "\27LJ\2\nO\0\0\2\1\2\0\t-\0\0\0009\0\0\0B\0\1\2\15\0\0\0X\1\3€-\0\0\0009\0\1\0B\0\1\1K\0\1\0\0À\19expand_or_jump\23expand_or_jumpableC\0\0\3\1\2\0\v-\0\0\0009\0\0\0)\2ÿÿB\0\2\2\15\0\0\0X\1\4€-\0\0\0009\0\1\0)\2ÿÿB\0\2\1K\0\1\0\0À\tjump\rjumpable‚\3\1\0\b\0\22\0+6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\1\3\0015\3\4\0B\1\2\0016\1\5\0009\1\6\0019\1\a\1'\3\b\0B\1\2\2'\2\t\0&\1\2\0016\2\0\0'\4\2\0B\2\2\0029\2\3\0025\4\n\0004\5\3\0>\1\1\5=\5\v\4B\2\2\0016\2\5\0009\2\f\0029\2\r\0025\4\14\0'\5\15\0003\6\16\0005\a\17\0B\2\5\0016\2\5\0009\2\f\0029\2\r\0025\4\18\0'\5\19\0003\6\20\0005\a\21\0B\2\5\0012\0\0€K\0\1\0\1\0\1\vsilent\2\0\n<C-j>\1\3\0\0\6i\6s\1\0\1\vsilent\2\0\n<C-k>\1\3\0\0\6i\6s\bset\vkeymap\npaths\1\0\1\npaths\0./site/pack/packer/start/friendly-snippets\tdata\fstdpath\afn\bvim\1\0\1\finclude\0\14lazy_load luasnip.loaders.from_vscode\fluasnip\frequire\0" },
+    config = { "\27LJ\2\n«\1\0\0\t\0\n\0\0186\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0026\1\3\0'\3\4\0006\4\5\0009\4\6\0046\6\a\0009\6\b\6\18\b\0\0B\6\2\2'\a\t\0B\4\3\2&\3\4\3B\1\2\1K\0\1\0\a, \rtbl_keys\bvim\vconcat\ntable#LuaSnip loaded for filetypes: \nprint\14available\fluasnip\frequire\2\1\0\b\0\r\0\0306\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\1\3\1B\1\1\0016\1\0\0'\3\2\0B\1\2\0029\1\3\0015\3\t\0004\4\3\0006\5\4\0009\5\5\0059\5\6\5'\a\a\0B\5\2\2'\6\b\0&\5\6\5>\5\1\4=\4\n\3B\1\2\0016\1\4\0009\1\v\0013\3\f\0)\4è\3B\1\3\1K\0\1\0\0\rdefer_fn\npaths\1\0\1\npaths\0./site/pack/packer/start/friendly-snippets\tdata\fstdpath\afn\bvim\14lazy_load luasnip.loaders.from_vscode\fluasnip\frequire\0" },
     loaded = true,
     path = "/Users/jordygarcia-m4/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["claude-code.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16claude-code\frequire\0" },
+    loaded = true,
+    path = "/Users/jordygarcia-m4/.local/share/nvim/site/pack/packer/start/claude-code.nvim",
+    url = "https://github.com/greggh/claude-code.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -177,7 +183,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    config = { "\27LJ\2\n-\0\1\4\1\2\0\5-\1\0\0009\1\0\0019\3\1\0B\1\2\1K\0\1\0\1À\tbody\15lsp_expandš\1\0\1\3\2\4\0\21-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\4€-\1\0\0009\1\1\1B\1\1\1X\1\v€-\1\1\0009\1\2\1B\1\1\2\15\0\1\0X\2\4€-\1\1\0009\1\3\1B\1\1\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\0À\1À\19expand_or_jump\23expand_or_jumpable\21select_next_item\fvisibleO\0\1\4\1\2\0\14-\1\0\0009\1\0\1)\3ÿÿB\1\2\2\15\0\1\0X\2\5€-\1\0\0009\1\1\1)\3ÿÿB\1\2\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\1À\tjump\rjumpableŒ\3\1\0\f\0\24\0)6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0005\4\a\0005\5\5\0003\6\4\0=\6\6\5=\5\b\0049\5\t\0009\5\n\0059\5\v\0055\a\14\0009\b\t\0003\n\f\0005\v\r\0B\b\3\2=\b\15\a9\b\t\0003\n\16\0005\v\17\0B\b\3\2=\b\18\aB\5\2\2=\5\t\0044\5\5\0005\6\19\0>\6\1\0055\6\20\0>\6\2\0055\6\21\0>\6\3\0055\6\22\0>\6\4\5=\5\23\4B\2\2\0012\0\0€K\0\1\0\fsources\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\f<S-Tab>\1\3\0\0\6i\6s\0\n<Tab>\1\0\2\f<S-Tab>\0\n<Tab>\0\1\3\0\0\6i\6s\0\vinsert\vpreset\fmapping\fsnippet\1\0\3\fsources\0\fsnippet\0\fmapping\0\vexpand\1\0\1\vexpand\0\0\nsetup\fluasnip\bcmp\frequire\0" },
+    config = { "\27LJ\2\n-\0\1\4\1\2\0\5-\1\0\0009\1\0\0019\3\1\0B\1\2\1K\0\1\0\1À\tbody\15lsp_expandš\1\0\1\3\2\4\0\21-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\4€-\1\0\0009\1\1\1B\1\1\1X\1\v€-\1\1\0009\1\2\1B\1\1\2\15\0\1\0X\2\4€-\1\1\0009\1\3\1B\1\1\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\0À\1À\19expand_or_jump\23expand_or_jumpable\21select_next_item\fvisibleO\0\1\4\1\2\0\14-\1\0\0009\1\0\1)\3ÿÿB\1\2\2\15\0\1\0X\2\5€-\1\0\0009\1\1\1)\3ÿÿB\1\2\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\1À\tjump\rjumpableŒ\3\1\0\f\0\24\0)6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0005\4\a\0005\5\5\0003\6\4\0=\6\6\5=\5\b\0049\5\t\0009\5\n\0059\5\v\0055\a\14\0009\b\t\0003\n\f\0005\v\r\0B\b\3\2=\b\15\a9\b\t\0003\n\16\0005\v\17\0B\b\3\2=\b\18\aB\5\2\2=\5\t\0044\5\5\0005\6\19\0>\6\1\0055\6\20\0>\6\2\0055\6\21\0>\6\3\0055\6\22\0>\6\4\5=\5\23\4B\2\2\0012\0\0€K\0\1\0\fsources\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\f<S-Tab>\1\3\0\0\6i\6s\0\n<Tab>\1\0\2\f<S-Tab>\0\n<Tab>\0\1\3\0\0\6i\6s\0\vinsert\vpreset\fmapping\fsnippet\1\0\3\fsources\0\fmapping\0\fsnippet\0\vexpand\1\0\1\vexpand\0\0\nsetup\fluasnip\bcmp\frequire\0" },
     loaded = true,
     path = "/Users/jordygarcia-m4/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
@@ -196,6 +202,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jordygarcia-m4/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "/Users/jordygarcia-m4/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -328,8 +339,12 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
-try_loadstring("\27LJ\2\n-\0\1\4\1\2\0\5-\1\0\0009\1\0\0019\3\1\0B\1\2\1K\0\1\0\1À\tbody\15lsp_expandš\1\0\1\3\2\4\0\21-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\4€-\1\0\0009\1\1\1B\1\1\1X\1\v€-\1\1\0009\1\2\1B\1\1\2\15\0\1\0X\2\4€-\1\1\0009\1\3\1B\1\1\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\0À\1À\19expand_or_jump\23expand_or_jumpable\21select_next_item\fvisibleO\0\1\4\1\2\0\14-\1\0\0009\1\0\1)\3ÿÿB\1\2\2\15\0\1\0X\2\5€-\1\0\0009\1\1\1)\3ÿÿB\1\2\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\1À\tjump\rjumpableŒ\3\1\0\f\0\24\0)6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0005\4\a\0005\5\5\0003\6\4\0=\6\6\5=\5\b\0049\5\t\0009\5\n\0059\5\v\0055\a\14\0009\b\t\0003\n\f\0005\v\r\0B\b\3\2=\b\15\a9\b\t\0003\n\16\0005\v\17\0B\b\3\2=\b\18\aB\5\2\2=\5\t\0044\5\5\0005\6\19\0>\6\1\0055\6\20\0>\6\2\0055\6\21\0>\6\3\0055\6\22\0>\6\4\5=\5\23\4B\2\2\0012\0\0€K\0\1\0\fsources\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\f<S-Tab>\1\3\0\0\6i\6s\0\n<Tab>\1\0\2\f<S-Tab>\0\n<Tab>\0\1\3\0\0\6i\6s\0\vinsert\vpreset\fmapping\fsnippet\1\0\3\fsources\0\fsnippet\0\fmapping\0\vexpand\1\0\1\vexpand\0\0\nsetup\fluasnip\bcmp\frequire\0", "config", "nvim-cmp")
+try_loadstring("\27LJ\2\n-\0\1\4\1\2\0\5-\1\0\0009\1\0\0019\3\1\0B\1\2\1K\0\1\0\1À\tbody\15lsp_expandš\1\0\1\3\2\4\0\21-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\4€-\1\0\0009\1\1\1B\1\1\1X\1\v€-\1\1\0009\1\2\1B\1\1\2\15\0\1\0X\2\4€-\1\1\0009\1\3\1B\1\1\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\0À\1À\19expand_or_jump\23expand_or_jumpable\21select_next_item\fvisibleO\0\1\4\1\2\0\14-\1\0\0009\1\0\1)\3ÿÿB\1\2\2\15\0\1\0X\2\5€-\1\0\0009\1\1\1)\3ÿÿB\1\2\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\1À\tjump\rjumpableŒ\3\1\0\f\0\24\0)6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0005\4\a\0005\5\5\0003\6\4\0=\6\6\5=\5\b\0049\5\t\0009\5\n\0059\5\v\0055\a\14\0009\b\t\0003\n\f\0005\v\r\0B\b\3\2=\b\15\a9\b\t\0003\n\16\0005\v\17\0B\b\3\2=\b\18\aB\5\2\2=\5\t\0044\5\5\0005\6\19\0>\6\1\0055\6\20\0>\6\2\0055\6\21\0>\6\3\0055\6\22\0>\6\4\5=\5\23\4B\2\2\0012\0\0€K\0\1\0\fsources\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\f<S-Tab>\1\3\0\0\6i\6s\0\n<Tab>\1\0\2\f<S-Tab>\0\n<Tab>\0\1\3\0\0\6i\6s\0\vinsert\vpreset\fmapping\fsnippet\1\0\3\fsources\0\fmapping\0\fsnippet\0\vexpand\1\0\1\vexpand\0\0\nsetup\fluasnip\bcmp\frequire\0", "config", "nvim-cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: claude-code.nvim
+time([[Config for claude-code.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16claude-code\frequire\0", "config", "claude-code.nvim")
+time([[Config for claude-code.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
@@ -340,7 +355,7 @@ try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B
 time([[Config for nvim-autopairs]], false)
 -- Config for: LuaSnip
 time([[Config for LuaSnip]], true)
-try_loadstring("\27LJ\2\nO\0\0\2\1\2\0\t-\0\0\0009\0\0\0B\0\1\2\15\0\0\0X\1\3€-\0\0\0009\0\1\0B\0\1\1K\0\1\0\0À\19expand_or_jump\23expand_or_jumpableC\0\0\3\1\2\0\v-\0\0\0009\0\0\0)\2ÿÿB\0\2\2\15\0\0\0X\1\4€-\0\0\0009\0\1\0)\2ÿÿB\0\2\1K\0\1\0\0À\tjump\rjumpable‚\3\1\0\b\0\22\0+6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\1\3\0015\3\4\0B\1\2\0016\1\5\0009\1\6\0019\1\a\1'\3\b\0B\1\2\2'\2\t\0&\1\2\0016\2\0\0'\4\2\0B\2\2\0029\2\3\0025\4\n\0004\5\3\0>\1\1\5=\5\v\4B\2\2\0016\2\5\0009\2\f\0029\2\r\0025\4\14\0'\5\15\0003\6\16\0005\a\17\0B\2\5\0016\2\5\0009\2\f\0029\2\r\0025\4\18\0'\5\19\0003\6\20\0005\a\21\0B\2\5\0012\0\0€K\0\1\0\1\0\1\vsilent\2\0\n<C-j>\1\3\0\0\6i\6s\1\0\1\vsilent\2\0\n<C-k>\1\3\0\0\6i\6s\bset\vkeymap\npaths\1\0\1\npaths\0./site/pack/packer/start/friendly-snippets\tdata\fstdpath\afn\bvim\1\0\1\finclude\0\14lazy_load luasnip.loaders.from_vscode\fluasnip\frequire\0", "config", "LuaSnip")
+try_loadstring("\27LJ\2\n«\1\0\0\t\0\n\0\0186\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0026\1\3\0'\3\4\0006\4\5\0009\4\6\0046\6\a\0009\6\b\6\18\b\0\0B\6\2\2'\a\t\0B\4\3\2&\3\4\3B\1\2\1K\0\1\0\a, \rtbl_keys\bvim\vconcat\ntable#LuaSnip loaded for filetypes: \nprint\14available\fluasnip\frequire\2\1\0\b\0\r\0\0306\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\1\3\1B\1\1\0016\1\0\0'\3\2\0B\1\2\0029\1\3\0015\3\t\0004\4\3\0006\5\4\0009\5\5\0059\5\6\5'\a\a\0B\5\2\2'\6\b\0&\5\6\5>\5\1\4=\4\n\3B\1\2\0016\1\4\0009\1\v\0013\3\f\0)\4è\3B\1\3\1K\0\1\0\0\rdefer_fn\npaths\1\0\1\npaths\0./site/pack/packer/start/friendly-snippets\tdata\fstdpath\afn\bvim\14lazy_load luasnip.loaders.from_vscode\fluasnip\frequire\0", "config", "LuaSnip")
 time([[Config for LuaSnip]], false)
 
 _G._packer.inside_compile = false

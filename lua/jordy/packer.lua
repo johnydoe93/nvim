@@ -10,6 +10,16 @@ return require('packer').startup(function(use)
   ---------------------------------------------------------------------------
   -- 🧩 Snippets and Completion
   ---------------------------------------------------------------------------
+  use {
+    'greggh/claude-code.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim', -- Required for git operations
+    },
+    config = function()
+      require('claude-code').setup()
+    end
+  }
+
   use({
     "L3MON4D3/LuaSnip",
     requires = { "rafamadriz/friendly-snippets" },
@@ -126,6 +136,7 @@ return require('packer').startup(function(use)
   ---------------------------------------------------------------------------
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use('nvim-treesitter/playground')
+  use('nvim-treesitter/nvim-treesitter-context')
 
   ---------------------------------------------------------------------------
   -- 🧭 Tools, Git, Terminal, UI
